@@ -1,5 +1,4 @@
-let waitlist = require('waitingArray')
-let tables = require('tableArray')
+const tables = require('tableArray')
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -29,8 +28,5 @@ app.get('/api/waiting', (req, res) => {
 //   }
 // })
 
-app.get('/api/tables', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
-})
 app.listen(3000)
 
