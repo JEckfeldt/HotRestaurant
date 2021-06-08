@@ -7,15 +7,23 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'))
+  res.sendFile(path.join(__dirname, './public/index.html'))
 })
-app.post('/Tables.js', (req,res)=>{
-  let reservation = {
-    customerName: ,
-    customerEmail: ,
-    customerID: ,
-    phoneNumber: 
-  }
+app.get('/tables', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/tables.html'))
 })
+app.get('/reserve', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/reserve.html'))
+})
+
+// app.post('/Tables.js', (req,res)=>{
+//   let reservation = {
+//     customerName: ,
+//     customerEmail: ,
+//     customerID: ,
+//     phoneNumber: 
+//   }
+// })
+
 app.listen(3000)
 
